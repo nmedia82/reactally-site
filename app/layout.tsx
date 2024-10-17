@@ -2,6 +2,7 @@ import Link from "next/link"; // Use Next.js Link for navigation
 import "./globals.css";
 import type { Metadata } from "next";
 import Image from "next/image";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Reactally - Secure, SEO Optimized and Fast Websites",
@@ -19,6 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-WW2BFDCZ" />
       <body>
         <header className="w-full p-4 flex justify-between items-center bg-gradient-to-r from-cyan-500 to-blue-500">
           <Image src="/logo.svg" alt="Reactally Logo" className="h-12 w-auto" />
