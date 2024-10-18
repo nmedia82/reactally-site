@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import Link from "next/link";
 
@@ -19,7 +21,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   type = "button",
 }) => {
   const baseClasses =
-    "px-4 py-2 rounded-md font-semibold transition-colors duration-300";
+    "px-4 py-3 rounded-md font-semibold transition-colors duration-300 text-[20px]";
   const combinedClasses = `${baseClasses} ${className} ${
     disabled ? "opacity-50 cursor-not-allowed" : ""
   }`;
@@ -37,8 +39,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       disabled={disabled} // Allow the button to be disabled conditionally
       type={type}
       onClick={onClick}
-      className={combinedClasses}
-    >
+      className={combinedClasses}>
       {children}
     </button>
   );

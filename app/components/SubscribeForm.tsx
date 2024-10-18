@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 import React, { useState } from "react";
 import CustomButton from "./CustomButton";
@@ -65,8 +67,7 @@ const SubscribeForm = () => {
   return (
     <section
       id="subscribe"
-      className="w-full py-20 px-4 bg-gradient-to-r from-cyan-500 to-blue-500"
-    >
+      className="w-full py-20 px-4 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-500">
       <div className="max-w-xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6 text-white">Stay Updated</h2>
         <p className="text-lg mb-8 text-white">
@@ -75,8 +76,7 @@ const SubscribeForm = () => {
         </p>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row gap-4"
-        >
+          className="flex flex-col sm:flex-row gap-4 text-black">
           <input
             type="email"
             placeholder="Enter your email"
@@ -88,8 +88,7 @@ const SubscribeForm = () => {
           <CustomButton
             type="submit"
             className="bg-white text-blue-600 hover:bg-blue-50 flex items-center justify-center"
-            disabled={loading}
-          >
+            disabled={loading}>
             {loading ? (
               <span className="loader border-t-transparent border-solid border-4 border-white rounded-full w-6 h-6 animate-spin"></span>
             ) : (
@@ -105,8 +104,7 @@ const SubscribeForm = () => {
               notification.type === "success"
                 ? "bg-green-500 fade-out"
                 : "bg-red-500 fade-out"
-            }`}
-          >
+            }`}>
             {notification.message}
           </div>
         )}
