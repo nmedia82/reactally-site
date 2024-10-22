@@ -12,7 +12,6 @@ import {
   Zap,
   Shield,
 } from "lucide-react";
-import { motion } from "framer-motion";
 import HomePage from "./pages/HomePage";
 import CustomButton from "./components/CustomButton";
 import SubscribeForm from "./components/SubscribeForm";
