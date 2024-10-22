@@ -23,14 +23,14 @@ export default function RootLayout({
     <html lang="en">
       <GoogleTagManager gtmId="GTM-WW2BFDCZ" />
       <body>
-        <Header />
-        <main className="pt-16">{children}</main>
-        <footer className="w-full p-6 bg-blue-600 text-white text-center">
+        {/* <Header /> */}
+        <main className="">{children}</main>
+        {/* <footer className="w-full p-6 bg-blue-600  text-white text-center">
           <p>© {new Date().getFullYear()} Reactally. All rights reserved.</p>
           <p className="mt-2 text-sm">
             Empowering the next generation of web creators.
           </p>
-        </footer>
+        </footer> */}
       </body>
     </html>
   );

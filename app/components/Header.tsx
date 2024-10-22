@@ -1,101 +1,56 @@
 /** @format */
 
-"use client";
+// components/Header.js
 
-import Link from "next/link";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-
-function NavLink({
-  href,
-  children,
-  onClick,
-}: {
-  href: string;
-  children: React.ReactNode;
-  onClick?: () => void;
-}) {
-  return (
-    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-      <Link
-        href={href}
-        className="text-white hover:text-blue-200 transition-colors duration-200"
-        onClick={onClick}>
-        {children}
-      </Link>
-    </motion.div>
-  );
-}
+import {
+  Moon,
+  Github,
+  X,
+  Search,
+  Facebook,
+  Instagram,
+  Twitter,
+  Linkedin,
+} from "lucide-react";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-
-  const menuVariants = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "-100%" },
-  };
-
   return (
-    <header className="fixed w-full z-50 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-500">
-      <nav className="container mx-auto px-6 py-3 max-w-[1200px]">
-        <div className="flex justify-between items-center">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}>
-            <Image
-              src="/logo.svg"
-              alt="Reactally Logo"
-              className="h-12 w-auto"
-              width={30}
-              height={30}
-            />
-          </motion.div>
-          <div className="hidden md:flex space-x-4">
-            <NavLink href="#about">About</NavLink>
-            <NavLink href="#features">Features</NavLink>
-            <NavLink href="#security">Security</NavLink>
-            <NavLink href="#subscribe">Subscribe</NavLink>
-          </div>
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-white focus:outline-none">
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
+    <header className="flex mx-auto max-w-[1300px] justify-between items-center p-4">
+      <div className="flex items-center space-x-2">
+        <div className="w-8 h-8 bg-gradient-to-r from-[#4EADFD] to-[#B38BF7] rounded-full"></div>
+        <span className="text-2xl font-bold">Reactally</span>
+      </div>
+      <nav className="hidden md:flex space-x-9">
+        <a href="#about" className="text-sm hover:text-[#4EADFD]">
+          About
+        </a>
+        <a href="#Features" className="text-sm hover:text-[#4EADFD]">
+          Features
+        </a>
+        <a href="#Security" className="text-sm hover:text-[#4EADFD]">
+          Security
+        </a>
+        <a href="#Subscribe" className="text-sm hover:text-[#4EADFD]">
+          Subscribe
+        </a>
+        {/* <a href="#" className="text-sm hover:text-[#4EADFD]">
+          Shop
+        </a> */}
       </nav>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial="closed"
-            animate="open"
-            exit="closed"
-            variants={menuVariants}
-            transition={{ duration: 0.5 }}
-            className="md:hidden bg-blue-600 w-full absolute top-full left-0">
-            <div className="flex flex-col items-center py-4">
-              <NavLink href="#about" onClick={toggleMenu}>
-                About
-              </NavLink>
-              <NavLink href="#features" onClick={toggleMenu}>
-                Features
-              </NavLink>
-              <NavLink href="#security" onClick={toggleMenu}>
-                Security
-              </NavLink>
-              <NavLink href="#subscribe" onClick={toggleMenu}>
-                Subscribe
-              </NavLink>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div className="flex items-center space-x-4">
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="Search"
+            className="bg-[#1C1C44] rounded-full py-1 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#4EADFD] w-36"
+          />
+          <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#4EADFD] w-4 h-4" />
+        </div>
+        <Facebook className="w-5 h-5" />
+        <Instagram className="w-5 h-5" />
+        <Twitter className="w-5 h-5" />
+        <Linkedin className="w-5 h-5" />
+      </div>
     </header>
   );
 }

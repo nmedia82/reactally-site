@@ -13,9 +13,9 @@ import {
   Shield,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import HomePage from "./pages/HomePage";
 import CustomButton from "./components/CustomButton";
 import SubscribeForm from "./components/SubscribeForm";
-
 const roboto = Roboto({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -39,14 +39,15 @@ export default function Home() {
 
   return (
     <main className={`flex min-h-screen flex-col ${roboto.className}`}>
-      <motion.section
+      <HomePage />
+      {/* <motion.section
         initial="initial"
         animate="animate"
         variants={stagger}
         className="flex flex-col items-center justify-center flex-1 px-4 py-20  text-center bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-500">
         <motion.h1
           variants={fadeIn}
-          className="text-5xl  lg:text-[70px] font-extrabold mb-6 text-white px-10 max-w-[1250px]">
+          className="text-2xl  lg:text-[70px] font-extrabold mb-6 text-white px-10 max-w-[1250px]">
           Build Secure, SEO-Optimized, and Lightning-Fast Websites with
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-400 to-white">
             {" "}
@@ -196,27 +197,27 @@ export default function Home() {
         </div>
       </section>
 
-      <SubscribeForm />
+      <SubscribeForm /> */}
     </main>
   );
 }
 
-function FeatureCard({
-  icon,
-  title,
-  description,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}) {
-  return (
-    <motion.div
-      // variants={fadeIn}
-      className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
-      <div className="mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-2 text-indigo-700">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </motion.div>
-  );
-}
+// function FeatureCard({
+//   icon,
+//   title,
+//   description,
+// }: {
+//   icon: React.ReactNode;
+//   title: string;
+//   description: string;
+// }) {
+//   return (
+//     <motion.div
+//       // variants={fadeIn}
+//       className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+//       <div className="mb-4">{icon}</div>
+//       <h3 className="text-xl font-semibold mb-2 text-indigo-700">{title}</h3>
+//       <p className="text-gray-600">{description}</p>
+//     </motion.div>
+//   );
+// }
