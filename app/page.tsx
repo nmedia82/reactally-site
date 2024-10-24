@@ -40,6 +40,7 @@ export default function Home() {
   return (
     <main className={`flex min-h-screen flex-col ${roboto.className}`}>
       <HomePage />
+
       {/* <motion.section
         initial="initial"
         animate="animate"

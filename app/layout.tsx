@@ -4,7 +4,6 @@ import "./globals.css";
 import { Metadata } from "next";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Header from "./components/Header";
-
 export const metadata: Metadata = {
   title: "Reactally - Secure, SEO Optimized and Fast Websites",
   description:
