@@ -4,16 +4,22 @@ import { Zap } from "lucide-react";
 
 export default function BatteriesIncluded() {
   const features = [
-    "Instant development with Vite.",
-    "Testing by Vitest and Playwright.",
-    "Large ecosystem of tools ready to use.",
-    "Built-in extendable styling: Tailwind, PostCSS, etc.",
-    "Debugging for SSR, browser, prerendering.",
-    "Ready for Vercel, Netlify, Deno, Cloudflare, Express...",
+    "⚡️ Lightning Bolt - Fast and High-Performance",
+    "🎨 Brush/Paint Palette - Stunning Design",
+    "⚙️ Gears/Cogs - No Technical Expertise Required",
+    "☁️ Cloud - Hassle-Free Hosting",
+    "🚀 Rocket - Revolutionary CMS",
+    "🔒 Shield/Lock - Secure Platform",
+    "🧩 Puzzle Piece - Customizable Features",
+    "🌍 Globe - Global Reach",
+    "🛠️ Hand with Wrench - User Empowerment",
+    "📊 Bar Chart - Analytics and Insights",
   ];
 
   return (
-    <section className="py-24 px-4 w-full bg-[#0D0D2B] overflow-hidden">
+    <section
+      id="about"
+      className="py-12 px-4 w-full bg-[#0D0D2B] overflow-hidden">
       <div className="container mx-auto relative flex flex-col lg:flex-row items-center justify-between">
         {/* Left Section: Centered and Larger Image */}
         <div className="lg:w-1/2 flex justify-center items-center mb-12 lg:mb-0">
@@ -30,16 +36,22 @@ export default function BatteriesIncluded() {
         {/* Right Section: Heading and List */}
         <div className="lg:w-1/2 text-left relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight text-center lg:text-left">
-            Batteries <span className=" text-[#6d88ff]">included</span>
+            About <span className=" text-[#6d88ff]">Reactally</span>
           </h2>
+          <p className="text-xl text-gray-300 my-4">
+            Reactally is revolutionizing the way websites are built and managed.
+            Our cutting-edge CMS platform empowers users to create stunning,
+            high-performance websites without the need for technical expertise
+            or the headaches of traditional hosting.
+          </p>
           <ul className="space-y-6">
             {features.map((item, index) => (
               <li key={index} className="flex items-start">
-                <div className="mr-4 mt-1">
+                {/* <div className="mr-4 mt-1">
                   <div className="w-8 h-8 rounded-full bg-[#FF6934] bg-opacity-20 flex items-center justify-center">
                     <Zap className="w-5 h-5 text-[#FF6934]" />
                   </div>
-                </div>
+                </div> */}
                 <span className="text-lg text-gray-200">{item}</span>
               </li>
             ))}

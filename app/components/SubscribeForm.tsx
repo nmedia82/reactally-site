@@ -76,7 +76,7 @@ export default function SubscribeForm() {
   return (
     <section
       id="Subscribe"
-      className="w-full  py-24  bg-gradient-to-b from-[#0D0D2B] to-[#1A1A3A] overflow-hidden">
+      className="w-full  py-16  bg-gradient-to-b from-[#0D0D2B] to-[#1A1A3A] overflow-hidden">
       <div className=" mx-auto text-center relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

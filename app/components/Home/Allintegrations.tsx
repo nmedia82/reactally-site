@@ -6,26 +6,26 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const logos = [
-  {
-    name: "Angular",
-    svg: "https://angular.io/assets/images/logos/angular/angular.png",
-  },
+  // {
+  //   name: "Angular",
+  //   svg: "https://angular.io/assets/images/logos/angular/angular.png",
+  // },
   {
     name: "AWS",
     svg: "https://img.icons8.com/androidL/200/FFFFFF/amazon-web-services.png",
   },
-  {
-    name: "Shopify",
-    svg: "https://cdn.shopify.com/assets/images/logos/shopify-bag.png",
-  },
+  // {
+  //   name: "Shopify",
+  //   svg: "https://cdn.shopify.com/assets/images/logos/shopify-bag.png",
+  // },
   {
     name: "Tailwind",
     svg: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png",
   },
-  {
-    name: "Figma",
-    svg: "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png",
-  },
+  // {
+  //   name: "Figma",
+  //   svg: "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png",
+  // },
   {
     name: "React",
     svg: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
@@ -36,24 +36,24 @@ const logos = [
   },
   {
     name: "Vercel",
-    svg: "https://vercel.com/favicon.ico",
+    svg: "https://www.svgrepo.com/show/327408/logo-vercel.svg",
   },
   {
-    name: "Stripe",
-    svg: "https://cdn.icon-icons.com/icons2/2699/PNG/512/stripe_logo_icon_167962.png",
+    name: "HTML",
+    svg: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png",
   },
   {
-    name: "Atlassian",
-    svg: "https://cdn.iconscout.com/icon/free/png-256/free-atlassian-logo-icon-download-in-svg-png-gif-file-formats--technology-brand-social-media-company-logos-pack-icons-6297176.png",
+    name: "CSS",
+    svg: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
   },
-  {
-    name: "Cloudflare",
-    svg: "https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png",
-  },
-  {
-    name: "Slack",
-    svg: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/306_Slack_logo-512.png",
-  },
+  // {
+  //   name: "Cloudflare",
+  //   svg: "https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png",
+  // },
+  // {
+  //   name: "Slack",
+  //   svg: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/306_Slack_logo-512.png",
+  // },
 ];
 
 export default function Component() {
@@ -69,7 +69,7 @@ export default function Component() {
   }, []);
 
   return (
-    <div className="relative max-w-[1300px] mx-auto flex flex-col items-center justify-center min-h-screen bg-[#0D0D2B] text-white p-8 overflow-hidden">
+    <div className="relative max-w-[1300px] mx-auto flex flex-col items-center justify-center py-28 bg-[#0D0D2B] text-white p-8 overflow-hidden">
       <div
         className="absolute inset-0 opacity-30"
         style={{

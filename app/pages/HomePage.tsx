@@ -159,9 +159,9 @@ export default function HomePage() {
 
             <section
               id="about"
-              className="bg-[#8badf7] w-full mx-auto py-16 text-center">
+              className="bg-[#0D0D2B] text-white w-full mx-auto py-16 text-center border-t border-b space-x-4   ">
               <div className=" mx-auto max-w-[1400px] px-20 ">
-                <h2 className="text-4xl text-black font-bold mb-4">
+                {/* <h2 className="text-4xl text-black font-bold mb-4">
                   About Reactally
                 </h2>
                 <p className="mb-8 text-2xl ">
@@ -170,10 +170,13 @@ export default function HomePage() {
                   create stunning, high-performance websites without the need
                   for technical expertise or the headaches of traditional
                   hosting.
-                </p>
-                <h2 className="text-3xl text-black font-bold mb-4">
+                </p> */}
+
+                <h2 className="text-4xl md:text-4xl font-bold text-white mb-4 relative inline-block">
                   Reactally is currently in development.
+                  <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#4EADFD] to-[#B38BF7]"></span>
                 </h2>
+
                 <p className="mb-8 text-2xl ">
                   Be among the first to experience the future of web
                   development!
