@@ -4,21 +4,25 @@ import { Zap } from "lucide-react";
 
 export default function BatteriesIncluded() {
   const features = [
-    "⚡️ Lightning Bolt - Fast and High-Performance",
-    "🎨 Brush/Paint Palette - Stunning Design",
-    "⚙️ Gears/Cogs - No Technical Expertise Required",
-    "☁️ Cloud - Hassle-Free Hosting",
-    "🚀 Rocket - Revolutionary CMS",
-    "🔒 Shield/Lock - Secure Platform",
-    "🧩 Puzzle Piece - Customizable Features",
-    "🌍 Globe - Global Reach",
-    "🛠️ Hand with Wrench - User Empowerment",
-    "📊 Bar Chart - Analytics and Insights",
+    "⚡️ Fast and High-Performance",
+    "🎨 Stunning Design",
+    "⚙️ No Technical Expertise Required",
+    "☁️ Hassle-Free Hosting",
+    "🚀 Revolutionary CMS",
+    "🔒 Secure Platform",
+    "🧩 Customizable Features",
+    "🌍 Global Reach",
+    "🛠️ User Empowerment",
+    "📊 Analytics and Insights",
   ];
+
+  // Split the features array into two parts
+  const firstHalf = features.slice(0, Math.ceil(features.length / 2));
+  const secondHalf = features.slice(Math.ceil(features.length / 2));
 
   return (
     <section
-      id="about"
+      id="about-us"
       className="py-12 px-4 w-full bg-[#0D0D2B] overflow-hidden">
       <div className="container mx-auto relative flex flex-col lg:flex-row items-center justify-between">
         {/* Left Section: Centered and Larger Image */}
@@ -36,7 +40,7 @@ export default function BatteriesIncluded() {
         {/* Right Section: Heading and List */}
         <div className="lg:w-1/2 text-left relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight text-center lg:text-left">
-            About <span className=" text-[#6d88ff]">Reactally</span>
+            About <span className=" text-[#d88af0]">Reactally</span>
           </h2>
           <p className="text-xl text-gray-300 my-4">
             Reactally is revolutionizing the way websites are built and managed.
@@ -44,18 +48,26 @@ export default function BatteriesIncluded() {
             high-performance websites without the need for technical expertise
             or the headaches of traditional hosting.
           </p>
-          <ul className="space-y-6">
-            {features.map((item, index) => (
-              <li key={index} className="flex items-start">
-                {/* <div className="mr-4 mt-1">
-                  <div className="w-8 h-8 rounded-full bg-[#FF6934] bg-opacity-20 flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-[#FF6934]" />
-                  </div>
-                </div> */}
-                <span className="text-lg text-gray-200">{item}</span>
-              </li>
-            ))}
-          </ul>
+
+          <div className="lg:flex lg:space-x-16">
+            {/* First Column */}
+            <ul className="space-y-6 lg:w-1/2">
+              {firstHalf.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-lg text-gray-200">{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Second Column */}
+            <ul className="space-y-6 lg:w-1/2">
+              {secondHalf.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-lg text-gray-200">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 

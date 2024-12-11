@@ -22,7 +22,7 @@ export default function HeroSection() {
       <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-normal">
         Build Secure, SEO-Optimized, and
         <br />
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-500 to-blue-300 animate-gradient-x">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-[#8dcfe9] to-[#d88af0] animate-gradient-x">
           Lightning-Fast Websites with
         </span>
         <br />
@@ -35,11 +35,11 @@ export default function HeroSection() {
       </p>
       <div className="flex space-x-4 mb-16">
         <a href="#Subscribe">
-          <button className="bg-gradient-to-r from-[#5c9af6] to-[#1163fa] text-white px-10 py-4 rounded-full text-xl font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+          <button className="bg-gradient-to-r from-[#d88af0] to-[#d88af0] text-white px-6 py-3 rounded-full text-xl font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
             Get Early Access
           </button>
         </a>
-        <a href="#About">
+        <a href="#about-us">
           <button className="bg-transparent text-white border-white hover:bg-white/10 px-6 py-3 rounded-full text-lg font-semibold">
             About Reactally
           </button>
